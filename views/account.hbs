@@ -1,0 +1,81 @@
+<div class="category-tab"><!--category-tab-->
+	<div class="col-sm-12">
+		<ul class="nav nav-tabs">
+			<li class="{{active1}}"><a href="#infoaccount" data-toggle="tab">Thông tin tài khoản</a></li>
+			<li><a class="{{active2}}"" href="#changepassword" data-toggle="tab">Đổi mật khẩu</a></li>
+			<li><a href="#cart" data-toggle="tab">Giỏ hàng</a></li>
+			<li><a href="#store" data-toggle="tab">Thông tin đơn hàng</a></li>
+		</ul>
+	</div>
+	<div class="tab-content">
+		<div class="col-sm-9">
+			{{#if result}}
+					<div class="alert alert-success">{{result}}</div>
+			{{/if}}
+		</div>
+		<div class="col-sm-9">
+			{{#if error1}}
+					<div class="alert alert-danger">{{error1}}</div>
+			{{/if}}
+		</div>
+		<div class="tab-pane fade {{active1}} in" id="infoaccount" >
+			
+			<div class="col-sm-9">
+				
+				<form method="post">
+      
+			       <div class="modal-body " aria-hidden="true">
+			            <fieldset>
+			            	<label for="usr">Tên đăng nhập:</label>
+			                	<input type="text" name="username" class="form-control" readonly value="{{user.username}}">
+			                <label for="usr">Họ tên:</label>
+			                	<input type="text" name="name" class="form-control" value="{{user.name}}">
+			                <label for="usr">Số điện thoại:</label>
+			                	<input type="text" value="{{user.numberphone}}" required="true" name="numberphone" class="form-control">
+			                <label for="usr">Địa chỉ:</label>
+			                	<input type="text" value="{{user.address}}" required="true" name="address" class="form-control">
+			                <label for="usr">Email:</label>
+			                	<input type="email" value="{{user.email}}" required="true" name="email" class="form-control">
+			            </fieldset>
+			        </div>
+			       <button type="submit" name='submit' value="changeinfo" class="btn btn-primary ui-state-default center-block">Lưu thay đổi</button>
+			       
+			    </form>
+			</div>
+		</div>
+		
+		<div class="tab-pane fade {{active2}} in" id="changepassword" >
+			<div class="col-sm-5">
+				<form method="post">
+			       <div class="modal-body " aria-hidden="true">
+			            <fieldset>
+			            	<label for="usr">Mật khẩu cũ:</label>
+			                	<input type="password" name="passold" required="true" class="form-control"  id="passold">
+			                <label for="usr">Mật khẩu mới:</label>
+			                	<input type="password" name="passnew" required="true" class="form-control" id="passnew">
+			                <label for="usr">Nhập lại mật khẩu mới:</label>
+			                	<input type="password" name="passconfirm" required="true" class="form-control" id="passconfirm">
+			            </fieldset>
+			        </div>
+			       <button type="submit" name='submit' value="changepassword" class="btn btn-primary ui-state-default center-block">Xác nhận</button>
+			    </form>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="cart" >
+			
+			<div class="col-sm-3">
+				Giỏ hàng
+			</div>
+		
+			
+		</div>
+		<div class="tab-pane fade" id="store" >
+			
+		<div class="col-sm-3">
+				Đơn hàng
+			</div>
+			
+		</div>
+		
+	</div>
+</div><!--/category-tab-->

@@ -1,0 +1,35 @@
+<h2 class="title text-center">Thông tin tài khoản khách hàng</h2>
+  <table class="table table-bordered table-hover">
+    <thead class="thead-inverse">
+      <tr >
+        
+        <th>Username</th>
+        <th>Name</th>
+        <th>Phone number</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data_table}}
+      <tr>
+        
+
+        <td id="username">{{username}}</td>
+        <td width="25%" id="name">{{name}}</td>
+        <td width="25%" id="numberphone">{{numberphone}}</td>
+        <td width="40%" id="address">{{address}}</td>
+        <td width="40%" id="email">{{email}}</td>
+        <td width="5%" class="text-center">
+          <!-- <i class="icon_remove"><button ">Remove</button></i>
+          <i class="icon_edit"><button ">Edit</button></i> -->
+          <a href="#">
+            <span class="glyphicon glyphicon-pencil icon_edit"></span>
+          </a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</h2>

@@ -1,0 +1,30 @@
+
+<section id="form"><!--form-->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-xs-offset-2 ">
+				<div class="login-form"><!--login form-->
+					<h2 class="text-center ">Thêm sách</h2>
+					<p id="text_result text-center alert alert-success">{{result}}</p>
+					{{#if errors}}
+						{{#each errors}}
+							<div class="alert alert-danger">{{msg}}</div>
+						{{/each}}
+					{{/if}}
+					<form action="#" method="post" enctype="multipart/form-data">
+						<input type="text" placeholder="Mã sách" name="masach" id="masach"/>
+						<input type="text" placeholder="Tên sách" name="tensach" id="tensach"/>
+						<input type="text" placeholder="Loại sách" name="loaisach" id="loaisach"/>
+						<input type="text" placeholder="Tên tác giả" name="tentacgia" id="tentacgia"/>
+						<input type="text" placeholder="Đơn giá" name="dongia" id="dongia"/>
+						<input type="text" placeholder="Nhà xuất bản" name="nhaxuatban" id="nhaxuatban"/>
+						<input type="file" name="avatarbook" accept="image/*">
+						
+						
+						<button type="submit" class="btn btn-default center-block">Thêm</button>
+					</form>
+				</div><!--/login form-->
+			</div>
+		</div>
+	</div>
+</section><!--/form-->

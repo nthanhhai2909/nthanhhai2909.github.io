@@ -1,0 +1,31 @@
+
+<section id="form"><!--form-->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-xs-offset-2 ">
+				<div class="login-form"><!--login form-->
+					<h2 class="text-center">Chỉnh sửa thông tin sách</h2>
+					<p id="text_result text-center">{{result}}</p>
+					{{#if errors}}
+						{{#each errors}}
+							<div class="alert alert-danger">{{msg}}</div>
+						{{/each}}
+					{{/if}}
+					<form action="#" method="post">
+						{{#each data}}
+							<input type="text" required value="{{masach}}" name="masach" id="masach"/>
+							<input type="text" required value="{{tensach}}" name="tensach" id="tensach"/>
+							<input type="text" required value="{{loaisach}}" name="loaisach" id="loaisach"/>
+							<input type="text" required value="{{tentacgia}}" name="tentacgia" id="tentacgia"/>
+							<input type="text" required value="{{dongia}}" name="dongia" id="dongia"/>
+							<input type="text" required value="{{nhaxuatban}}" name="nhaxuatban" id="nhaxuatban"/>
+							<input type="file" name="pic" accept="image/*">
+						{{/each}}
+						
+						<button type="submit" name='submit' value="edit_product_default" class="btn btn-default center-block">Xác nhận</button>
+					</form>
+				</div><!--/login form-->
+			</div>
+		</div>
+	</div>
+</section><!--/form-->

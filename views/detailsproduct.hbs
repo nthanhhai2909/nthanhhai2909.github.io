@@ -1,0 +1,102 @@
+<div class="features_items"><!--features_items-->
+	<h2 class="title text-center">Chỉ tiết sản phẩm</h2>
+	<div class="row">
+		<div class="col-sm-4">
+			<img src="../images/books/cgplt.jpg" class="img-responsive" alt="Cinque Terre" width="200" height="100"> 
+		</div>
+		{{#each data}}
+			<div class="col-sm-5">
+				Tên sách: {{tensach}}  </br>
+				Mã sách: {{masach}}</br>
+				Loại sách: {{loaisach}}</br>
+				Nhà xuất bản: {{nhaxuatban}}</br>
+				Tên tách giả: {{tentacgia}}</br>
+				Đơn giá: {{dongia}}</br>
+				<form method="post">
+					<button class="btn btn-warning" type="submit" name='submit' value="remove_product"><i class="glyphicon glyphicon-remove" ></i></button>
+					
+					<button class="btn btn-warning" type="submit" name='submit' value="edit_product"><i class="glyphicon glyphicon-pencil" ></i></button>
+					<button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i></button>
+			</div>
+					<div class="col-sm-3">
+						<button type="button" class="btn btn-warning">Mua ngay</button> 
+					</div>
+				</form>
+			
+			
+		{{/each}}
+		
+	</div>
+	
+</div><!--features_items-->
+<div class="recommended_items"><!--recommended_items-->
+						<h2 class="title text-center">Sách liên quan</h2>
+						
+						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="item active">	
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/recommend1.jpg" alt="" />
+													<h2>$56</h2>
+													<p>Easy Polo Black Edition</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/recommend2.jpg" alt="" />
+													<h2>$56</h2>
+													<p>Easy Polo Black Edition</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/recommend3.jpg" alt="" />
+													<h2>$56</h2>
+													<p>Easy Polo Black Edition</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">	
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/recommend1.jpg" alt="" />
+													<h2>$56</h2>
+													<p>Easy Polo Black Edition</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+								<i class="fa fa-angle-left"></i>
+							  </a>
+							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+								<i class="fa fa-angle-right"></i>
+							  </a>			
+						</div>
+					</div><!--/recommended_items-->	
